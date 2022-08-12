@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import Sidebar from '../sidebar/Sidebar'
 
 const Body = () => {
@@ -12,7 +13,6 @@ const Body = () => {
 export default Body
 
 const BodyArea = styled.div`
-    color:red;
     display:flex;
     height:100vh;
 `;
