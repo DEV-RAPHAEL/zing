@@ -1,8 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-function Options({Icon, title}) {
+function Options({Icon, title, newRoom}) {
+
+    /* Add and select Room function */
+    const addRoom = () =>{
+
+    };
+
+    const selectRoom = () =>{
+
+    };
   return (
-    <Option>
+    <Option
+    /* function to select or create Room */
+        onClick={addRoom ? addRoom : selectRoom}
+    >
         {Icon && <Icon fontSize='small' style={{padding:10}} />}
         {Icon ? (
             <h3>{title}</h3>
@@ -31,7 +43,7 @@ const Option = styled.div`
         font-weight: 500;
     }
     > h3 span{
-        padding: 15px;
+        padding: 10px;
     }
 `;
 const OptionChannel = styled.div``;

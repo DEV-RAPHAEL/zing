@@ -11,6 +11,9 @@ import AppsIcon from "@mui/icons-material/Apps"
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder"
 import FileCopyIcon from "@mui/icons-material/FileCopy"
 import ExpandLessIcon from "@mui/icons-material/ExpandLess"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import AddIcon from "@mui/icons-material/Add"
+
 
 
  
@@ -35,8 +38,11 @@ const Sidebar = () => {
             <Options Icon={AppsIcon} title='Apps'/>
             <Options Icon={FileCopyIcon} title='FIle Browser'/>
             <Options Icon={ExpandLessIcon} title='Show Less'/>
+            <hr />
+            <Options Icon={ExpandMoreIcon} title='Rooms'/>
+            <hr />
+            <Options Icon={AddIcon} newRoom title='Create a Room'/>
 
-        
     </SidebarContainer>
     )
 }
@@ -50,12 +56,18 @@ const SidebarContainer = styled.div`
     flex:0.3;
     max-width: 260px;
     border-top: 1px solid #0b4597;
+
+    >  hr{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border:1px solid #0b4597;
+    }
 `;
 const SidebarHeader = styled.div`
     display:flex;
 
     border-bottom: 1px solid #0b4597;
-    padding: 13px;
+    padding: 8px;
 
     > .MuiSvgIcon-root  {
         padding: 8px;
